@@ -14,3 +14,6 @@
         * [🟢 Connection Tester](readme/2025/patriotctf/web/connection-tester.md)
         * [🟢 Trust Vault](readme/2025/patriotctf/web/trust-vault.md)
         * [🟢 Trust Fall](readme/2025/patriotctf/web/trust-fall.md)
+    * [🟡 Advent of CTF](readme/2025/advent-of-ctf/README.md)
+      * [🟣 crypto](readme/2025/advent-of-ctf/crypto/README.md)
+        * [🟡 the mission begins](readme/2025/advent-of-ctf/crypto/the-mission-begins.md)
