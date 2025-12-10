@@ -17,3 +17,5 @@
     * [🟡 Advent of CTF](readme/2025/advent-of-ctf/README.md)
       * [🟣 crypto](readme/2025/advent-of-ctf/crypto/README.md)
         * [🟡 the mission begins](readme/2025/advent-of-ctf/crypto/the-mission-begins.md)
+      * [🟣 forensics](readme/2025/advent-of-ctf/forensics/README.md)
+        * [🟡 The first strike](readme/2025/advent-of-ctf/forensics/the-first-strike.md)
