@@ -1,4 +1,4 @@
-# 🟡 the mission begins
+# 🟢 the mission begins
 
 <figure><img src="../../../../.gitbook/assets/image (79).png" alt=""><figcaption></figcaption></figure>
 
