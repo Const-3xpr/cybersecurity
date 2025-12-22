@@ -21,6 +21,8 @@
         * [🟢 The first strike](readme/2025/advent-of-ctf/forensics/the-first-strike.md)
       * [🟣 miscellaneous](readme/2025/advent-of-ctf/miscellaneous/README.md)
         * [🟢 syndicate infrastructure](readme/2025/advent-of-ctf/miscellaneous/syndicate-infrastructure.md)
+      * [🟣 web](readme/2025/advent-of-ctf/web/README.md)
+        * [🟢 kramazon](readme/2025/advent-of-ctf/web/kramazon.md)
     * [🟡 Bsides\_Algiers](readme/2025/bsides_algiers/README.md)
       * [🟣 Web](readme/2025/bsides_algiers/web/README.md)
         * [🟢 mytemplates](readme/2025/bsides_algiers/web/mytemplates.md)
