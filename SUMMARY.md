@@ -25,6 +25,7 @@
         * [🟢 kramazon](readme/2025/advent-of-ctf/web/kramazon.md)
       * [🟣 binary exploitation](readme/2025/advent-of-ctf/binary-exploitation/README.md)
         * [🟢 KDNU-3B](readme/2025/advent-of-ctf/binary-exploitation/kdnu-3b.md)
+        * [🟢 failed\_exfil](readme/2025/advent-of-ctf/binary-exploitation/failed_exfil.md)
     * [🟡 Bsides\_Algiers](readme/2025/bsides_algiers/README.md)
       * [🟣 Web](readme/2025/bsides_algiers/web/README.md)
         * [🟢 mytemplates](readme/2025/bsides_algiers/web/mytemplates.md)
