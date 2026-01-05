@@ -12,72 +12,81 @@
 
 <figure><img src="../../../../.gitbook/assets/image (94).png" alt=""><figcaption></figcaption></figure>
 
-now we will only be dealing with kramazon
-
-<mark style="color:red;background-color:red;">**look closely Title column says IDOR**</mark>
+* for now i will only be dealing with kramazon
 
 <figure><img src="../../../../.gitbook/assets/image (95).png" alt=""><figcaption></figcaption></figure>
 
-only working functionality is Order Now
+* after careful inspection i identified Order Now is the only working functionality
 
 <figure><img src="../../../../.gitbook/assets/image (96).png" alt=""><figcaption></figcaption></figure>
 
-which created 3 requests(1st request and response is shown above)
+4. after clicking it i observed it created 3 requests(highlighted in yellow)
 
-interesting callback\_url we can intercept the response and make changes with it
+* in the 1st request above there's interesting callback\_url in response that we can intercept the response and make changes with it
 
 <figure><img src="../../../../.gitbook/assets/image (97).png" alt=""><figcaption></figcaption></figure>
 
-2nd request and it's response
+* 2nd request and it's response
 
 <figure><img src="../../../../.gitbook/assets/image (98).png" alt=""><figcaption></figcaption></figure>
 
-3rd request and response
-
-here i still don't understand how did response get user id because there was no login and only set cookie when visiting it's home page so may be it's cookie used as user id and in request json body there is no mention of user id
+* 3rd request and response
+* here i still don't understand how did response get user id because there was no login and it set-cookie when visiting it's home page so it's cookie used as user id and in request body there is no mention of user id
 
 <figure><img src="../../../../.gitbook/assets/image (99).png" alt=""><figcaption></figcaption></figure>
 
-cookie is base64 encoded
+5. cookie is base64 encoded
 
 <figure><img src="../../../../.gitbook/assets/image (100).png" alt=""><figcaption></figcaption></figure>
 
-i just changed base64 cookie from BA to BB and it changed user id in response
+6. so i just changed base64 cookie from BA to BB and it changed user id in response
 
-i tried manipulating it but can't get user id 1
-
-so let's look at how requests are created
+* i tried manipulating it but can't get user id 1
 
 <figure><img src="../../../../.gitbook/assets/image (101).png" alt=""><figcaption></figcaption></figure>
 
-in home page i don't see create-order or finalize but have script.js
+7. now let's look at how requests are created
+
+* in home page inside response i don't see create-order or finalize request codes but have javascript called script.js
 
 <figure><img src="../../../../.gitbook/assets/image (102).png" alt=""><figcaption></figcaption></figure>
 
-there is create-order and finalize requests in this javascript and there is a interesting function which has bit-wise xor but it's an unused code left as a hint
+* there is create-order and finalize requests in this javascript and there is a interesting function which has XOR but it's an unused code left as a hint so note down that hexadecimal `0x37`
 
 <figure><img src="../../../../.gitbook/assets/image (3) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-base64 decode
+8. let's decode our cookie  using base64 decoder in burp
 
-<figure><img src="../../../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-reverse the xor logic
+9. after base64 decoding i took the first byte which is `0x04`  and did XOR decoding (you can also use windows calculator in programmer mode)
 
-do with all the other hex and convert it to ascii to get our user id
+* do with all the other hex and convert it to ascii to get our user id
 
-<figure><img src="../../../../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-let's use this logic to forge cookie of user\_id 1
+10. let's forge the cookie using user id 1
+
+<figure><img src="../../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+* to forge the cookie convert ascii `1` to hexadecimal which is `31` in hexadecimal
 
 <figure><img src="../../../../.gitbook/assets/image (4) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
+* now i will XOR encode it using `0x37` which is `0x31` XOR `0x37` = `0x06`
+
 <figure><img src="../../../../.gitbook/assets/image (5) (1) (1).png" alt=""><figcaption></figcaption></figure>
+
+* encode the XOR result using base64
 
 <figure><img src="../../../../.gitbook/assets/image (6) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-only got half the flag but now we know the location of full flag
+11. copy and paste that base64 encoded forged cookie in request and also URL encode like above screenshot
 
-<figure><img src="../../../../.gitbook/assets/image (7) (1) (1).png" alt=""><figcaption></figcaption></figure>
+* we only got half the flag but now we know the location of full flag which is displayed in the response
 
-got the full flag
+<figure><img src="../../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+12. now modify request to the flag path and we will get the full flag
+
+Conclusion: During source code analysis, unused code revealed XOR-based logic which made it possible to decode the XOR obfuscation of the cookie and used that same XOR obfuscation logic to forge our own cookie leading to IDOR vulnerability.
