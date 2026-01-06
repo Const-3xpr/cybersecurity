@@ -2,14 +2,14 @@
 
 Contents:
 
-1. [Description](kramazon.md#descriptionn)
+1. [Description](kramazon.md#w-description)
 2. Enumeration of website
 
 
 
 
 
-#### Descriptionn
+#### w Description
 
 <figure><img src="../../../../.gitbook/assets/image (91).png" alt=""><figcaption></figcaption></figure>
 
