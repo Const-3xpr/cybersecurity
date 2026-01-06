@@ -2,19 +2,11 @@
 
 Contents:
 
-1.
-
-    ```markdown
-    [Description](#description)
-    ```
+1. \[Description]\(#description)
 
 
 
-1.
-
-    ```markdown
-    ## Description: xyasdsffa
-    ```
+1. ### Description
 
 <figure><img src="../../../../.gitbook/assets/image (91).png" alt=""><figcaption></figcaption></figure>
 
