@@ -2,21 +2,26 @@
 
 Contents:
 
-1. \[Description]\(#description)
+1. #### [Description](kramazon.md#id-1.-description)
+2. #### [Enumeration of website](kramazon.md#id-2.-enumerating-website)
+3. ####
 
-
-
-1. ### Description
+#### 1. Description
 
 <figure><img src="../../../../.gitbook/assets/image (91).png" alt=""><figcaption></figcaption></figure>
 
+
+
+#### 2. Enumeration of website
+
 <figure><img src="../../../../.gitbook/assets/image (92).png" alt=""><figcaption></figcaption></figure>
 
-1. visit the website
-2. for now let's only analyze resources or pages which has host name https://kramazon.csd.lol/
-3. go to Target -> site map -> add to scope
+* visit the website
+* for now let's only analyze resources or pages which has host name https://kramazon.csd.lol/
 
 <figure><img src="../../../../.gitbook/assets/image (93).png" alt=""><figcaption></figcaption></figure>
+
+* go to Target -> site map -> add to scope
 
 <figure><img src="../../../../.gitbook/assets/image (94).png" alt=""><figcaption></figcaption></figure>
 
