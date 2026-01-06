@@ -3,20 +3,19 @@
 Contents:
 
 1. [Description](kramazon.md#description)
+2. Enumeration of website
 
 
 
 
 
-**1.**
-
-#### Description
+1. #### Description
 
 <figure><img src="../../../../.gitbook/assets/image (91).png" alt=""><figcaption></figcaption></figure>
 
 
 
-#### 2. Enumeration of website
+2. #### Enumeration of website
 
 <figure><img src="../../../../.gitbook/assets/image (92).png" alt=""><figcaption></figcaption></figure>
 
