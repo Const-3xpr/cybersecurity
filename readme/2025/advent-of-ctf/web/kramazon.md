@@ -2,11 +2,11 @@
 
 Contents:
 
-1. [Description](kramazon.md#id-1.description)
+1. [Description](kramazon.md#description)
 
 
 
-#### 1.Description
+#### Description
 
 <figure><img src="../../../../.gitbook/assets/image (91).png" alt=""><figcaption></figcaption></figure>
 
