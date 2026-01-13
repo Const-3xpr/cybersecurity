@@ -2,7 +2,7 @@
 
 **Contents:**
 
-1. [Description](kramazon.md#id-1-description)
+1. [Description](kramazon.md#description)
 2. [Enumeration of website](kramazon.md#enumeration-of-website)
 3. [Source code analysis](kramazon.md#source-code-analysis)
 4. [XOR-Decoding](kramazon.md#xor-decoding)
@@ -13,7 +13,7 @@
 
 ***
 
-#### Description:
+### Description:
 
 <figure><img src="../../../../.gitbook/assets/image (91).png" alt=""><figcaption></figcaption></figure>
 
@@ -21,7 +21,7 @@
 
 ***
 
-#### Enumeration of website:
+### Enumeration of website:
 
 <figure><img src="../../../../.gitbook/assets/image (92).png" alt=""><figcaption></figcaption></figure>
 
@@ -81,7 +81,7 @@
 
 ***
 
-#### Source code analysis:
+### Source code analysis:
 
 <figure><img src="../../../../.gitbook/assets/image (101).png" alt=""><figcaption></figcaption></figure>
 
@@ -98,7 +98,7 @@
 
 ***
 
-#### XOR-Decoding:
+### XOR-Decoding:
 
 <figure><img src="../../../../.gitbook/assets/image (3) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -119,7 +119,7 @@
 
 ***
 
-#### Exploitation:
+### Exploitation:
 
 <figure><img src="../../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
@@ -155,7 +155,7 @@
 
 ***
 
-#### Conclusion:
+### Conclusion:
 
 During source code analysis, unused code revealed XOR-based logic which made it possible to decode the XOR obfuscation of the cookie and used that same XOR obfuscation logic to forge our own cookie leading to IDOR vulnerability.
 
