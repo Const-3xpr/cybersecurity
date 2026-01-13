@@ -9,15 +9,13 @@
 5. [Exploitation](kramazon.md#exploitation)
 6. [Conclusion](kramazon.md#conclusion)
 
-&#x20;
-
-&#x20;
+***
 
 #### Description:
 
 <figure><img src="../../../../.gitbook/assets/image (91).png" alt=""><figcaption></figcaption></figure>
 
-&#x20;
+***
 
 #### Enumeration of website:
 
@@ -75,7 +73,7 @@
 * so i just changed base64 cookie from BA to BB and it changed user id in response
 * i tried manipulating it but can't get user id 1
 
-&#x20;
+***
 
 #### Source code analysis:
 
@@ -90,7 +88,7 @@
 
 * there is **create-order** and **finalize** requests in this javascript and there is a interesting function which has XOR but it's an unused code left as a hint so note down that hexadecimal `0x37`&#x20;
 
-&#x20;
+***
 
 #### XOR-Decoding:
 
@@ -109,7 +107,7 @@
 
 <figure><img src="../../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-&#x20;
+***
 
 #### Exploitation:
 
@@ -143,7 +141,7 @@
 
 * now modify request to the flag path and we will get the full flag
 
-&#x20;
+***
 
 #### Conclusion:
 
