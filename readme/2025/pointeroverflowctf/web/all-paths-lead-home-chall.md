@@ -1,34 +1,34 @@
 # 🟢 all paths lead home chall
 
-<figure><img src="../../../../.gitbook/assets/image (21) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (91).png" alt=""><figcaption></figcaption></figure>
 
 let's visit the website
 
-<figure><img src="../../../../.gitbook/assets/image (22) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (92).png" alt=""><figcaption></figcaption></figure>
 
 it's a very simple page so let's test the functionality of the web page by clicking 'Open' button to see what will happen
 
-<figure><img src="../../../../.gitbook/assets/image (23) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (93).png" alt=""><figcaption></figcaption></figure>
 
 looks like LFI at first glance so let's test that first
 
-<figure><img src="../../../../.gitbook/assets/image (24).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (94).png" alt=""><figcaption></figcaption></figure>
 
 a simple payload got blocked
 
 in challenge they mentioned '/secret/' that we are not supposed to see
 
-<figure><img src="../../../../.gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (95).png" alt=""><figcaption></figcaption></figure>
 
 now we got 2 hints 1st it has legacy compatibility and 2nd the file location
 
-<figure><img src="../../../../.gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (96).png" alt=""><figcaption></figcaption></figure>
 
 when we visited file loaction at `/docs/legacy.html` we got 2 more hints 1st `&legacy=1`  maybe a parameter and it accepts UTF-7 encoding for legacy decoding
 
 let's research about UTF-7
 
-<figure><img src="../../../../.gitbook/assets/image (27).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (97).png" alt=""><figcaption></figcaption></figure>
 
 **To represent non-ASCII Unicode characters, the encoder "shifts" into a special mode. This mode begins with a plus sign (`+`).** The following characters are then encoded in a modified Base64 format, representing UTF-16 code units. **This block of modified Base64 ends when a character not in the Base64 set is encountered. A hyphen (`-`)** is often used as a specific delimiter to mark the end of the shifted sequence.
 
@@ -38,13 +38,13 @@ The start of these blocks of modified Base64-encoded UTF-16 is indicated by a `+
 
 source: [wikipedia](https://en.wikipedia.org/wiki/UTF-7)
 
-<figure><img src="../../../../.gitbook/assets/image (28).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (98).png" alt=""><figcaption></figcaption></figure>
 
 this site provided this info:
 
 {% embed url="https://www.fileformat.info/info/unicode/char/002f/index.htm" %}
 
-<figure><img src="../../../../.gitbook/assets/image (29).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (99).png" alt=""><figcaption></figcaption></figure>
 
 then use hex to base64 converter
 
@@ -68,7 +68,7 @@ so:
 
 many ctf put their flag in flag.txt and don't forget URL encode the payload and put `legacy=1` parameter otherwise it won't work
 
-<figure><img src="../../../../.gitbook/assets/image (30).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (100).png" alt=""><figcaption></figcaption></figure>
 
 
 
