@@ -29,3 +29,8 @@
     * [🟡 Bsides\_Algiers](readme/2025/bsides_algiers/README.md)
       * [🟣 Web](readme/2025/bsides_algiers/web/README.md)
         * [🟢 mytemplates](readme/2025/bsides_algiers/web/mytemplates.md)
+  * [🔴 2026](readme/2026/README.md)
+    * [🟡 VishwaCTF](readme/2026/vishwactf/README.md)
+      * [🟣 Web](readme/2026/vishwactf/web/README.md)
+        * [🟢 Heap of secrets](readme/2026/vishwactf/web/heap-of-secrets.md)
+        * [🟢 flag market](readme/2026/vishwactf/web/flag-market.md)
